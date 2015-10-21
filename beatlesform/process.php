@@ -30,25 +30,39 @@ include_once "buildUsername.php";
     die;
   }
 
+  if( !isset($_POST['password']) || strlen($_POST['password']) == 0 )
+  {
+    echo "Password is not set. Please enter Password.";
+    die;
+  }
+  elseif( strlen($_POST['password']) < 6 )
+  {
+    echo "Password must be at least 6 characters. Please re-enter Password.";
+    die;
+  }
+
   if( !isset($_POST['beatle']) || strlen($_POST['beatle']) == 0 )
   {
     echo "Favorite Beatle is not set. Please enter your favorite Beatle.";
     die;
   }
 
-  echo $_POST['title'], " ";
+  echo "Title: ", $_POST['title'], "<br />";
   $mytitle = $_POST['title'];
 
-  echo $_POST['first_name'], " ";
+  echo "First Name: ", $_POST['first_name'], "<br />";
   $myfn = $_POST['first_name'];
 
-  echo $_POST['last_name'], ". favorite beatle is: ";
+  echo "First Name: ", $_POST['last_name'], "<br />";
   $myln = $_POST['last_name'];
 
-  echo $_POST['beatle'];
+  echo "Password: ", $_POST['password'], "<br />";
+  $myln = $_POST['last_name'];
+
+  echo "Favorite Beatle: ", $_POST['beatle'], "<br />";
   $mybeatle = $_POST['beatle'];
 
   $myUsername = new buildUsername($myfn, $myln, $mytitle, $mybeatle, $beatlesArray);
-  echo "<br />NewUsername is: ", $myUsername->getNewUsername();
+  echo "NewUsername is: ", $myUsername->getNewUsername();
 
 ?>
