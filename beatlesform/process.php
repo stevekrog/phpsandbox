@@ -57,7 +57,6 @@ include_once "buildUsername.php";
   $myln = $_POST['last_name'];
 
   echo "Password: ", $_POST['password'], "<br />";
-  $myln = $_POST['last_name'];
 
   echo "Favorite Beatle: ", $_POST['beatle'], "<br />";
   $mybeatle = $_POST['beatle'];
