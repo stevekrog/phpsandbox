@@ -3,8 +3,8 @@
         private $items;  // array of items.
         private $options; // hold all html options
         private $selectMenu; // final select menu
-        private $menuDefault; // final select menu
-        private $menuName; // final select menu
+        private $menuDefault; // Default text displayed in menu
+        private $menuName; // Name used so it comes through in post array
 
         function __construct($itemArray='', $menuDefault='Pick a selection', $menuName='myMenu') {
             $this->items = $itemArray;
