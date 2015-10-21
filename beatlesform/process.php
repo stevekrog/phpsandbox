@@ -53,7 +53,7 @@ include_once "buildUsername.php";
   echo "First Name: ", $_POST['first_name'], "<br />";
   $myfn = $_POST['first_name'];
 
-  echo "First Name: ", $_POST['last_name'], "<br />";
+  echo "Last Name: ", $_POST['last_name'], "<br />";
   $myln = $_POST['last_name'];
 
   echo "Password: ", $_POST['password'], "<br />";
