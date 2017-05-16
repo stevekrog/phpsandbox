@@ -18,7 +18,7 @@ function isPalindrome($inString)
     }
     else
     {
-        return "'" . $inString . "' is a not palindrome<br />";
+        return "'" . $inString . "' is not a palindrome<br />";
     }
 }
 
@@ -143,14 +143,14 @@ function getLastEOSCharPos($posDot, $posQM, $posExcl)
 //result: david
 function getEmailName($inString)
 {
-    $ampersandPos = strpos($inString, "@");
-    if($ampersandPos==false)
+    $atSignPos = strpos($inString, "@");
+    if($atSignPos==false)
     {
         print "Invalid email address\n";
     }
     else
     {
-        $emailName = substr($inString,0,$ampersandPos);
+        $emailName = substr($inString,0,$atSignPos);
         return $emailName;
     }
 }
